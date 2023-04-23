@@ -6,16 +6,16 @@ const maxItems=5;
 
 
 function addItem(){
-let added = basket.unshift('apple');
+let added = basket.unshift('apple');// I think this is the intended way for completeing the function addItem
 console.log(`The basket now has the following items: ${basket}`);
-//unshift 
+//unshift. While working on this I had issues because I was using shift instead of unshift
 }
 //- take an input parameter for a string `item`
 // add the new item to the global array `basket`. 
 // return `true` indicating the item was added
 
 function listItems(){
-//for loop
+//for loop. While first going over the assignment I was creating the functions and just writing down what I thought was the correct way to do each function. So thats why these are here
 for (i=0; i<basket.length;i++){
     console.log(basket[i]);
 }
@@ -25,7 +25,7 @@ for (i=0; i<basket.length;i++){
 function empty(){
     basket.splice(0,basket.length);
     console.log(basket,'no items in the basket');
-}// clear items from basket
+}// clear items from basket with splice. the splice made this really easy
 
 function isFull(){
     if (basket.length < maxItems){
@@ -35,7 +35,8 @@ function isFull(){
         console.log(true,' There is no more room in the basket.')
     }
 }
+//if and else statement using .length
 function removeItem(){
     console.log(basket.pop())
 }
-//pop
+//pop makes this function really easy because it does what I need it to remove from the array and to return it to the user
